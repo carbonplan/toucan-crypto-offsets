@@ -12,16 +12,16 @@ with open("README.md") as f:
 
 PYTHON_REQUIRES = ">=3.7"
 
-description = "carbonplan python project template"
+description = "An analysis of offset credits bridged to the blockchain by Toucan"
 
 setup(
-    name="carbonplan-project",
+    name="carbonplan-toucan-crypto-explainer",
     description=description,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
-    maintainer="Raphael Hagen",
-    maintainer_email="raphael@carbonplan.org",
-    url="https://github.com/carbonplan/python-project-template",
+    maintainer="Grayson Badgley",
+    maintainer_email="grayson@carbonplan.org",
+    url="https://github.com/carbonplan/toucan-crypto-explainer",
     packages=find_packages(),
     include_package_data=True,
     python_requires=PYTHON_REQUIRES,
