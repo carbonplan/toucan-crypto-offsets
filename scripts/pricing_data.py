@@ -1,6 +1,6 @@
-import json
 from pathlib import Path
 
+import pandas as pd
 import requests
 
 endpoints = {
@@ -27,8 +27,10 @@ def main():
         ts = get_closing_ts(data)
         store[coin] = ts
 
+    d = pd.DataFrame(store).sort_index().to_json()
+
     with open(Path(__file__).parents[1] / 'data/coin_price_ts.json', 'w') as f:
-        json.dump(store, f)
+        f.write(d)
 
 
 if __name__ == '__main__':
