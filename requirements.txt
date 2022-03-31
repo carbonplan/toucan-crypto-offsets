@@ -1,7 +1,4 @@
-carbonplan
-carbonplan[styles]
-carbonplan[data]
-zarr
-pathlib
-intake
-intake-xarray
+numpy==1.21.1
+matplotlib-base==3.4.3
+pandas==1.3.0
+requests==2.26.0
