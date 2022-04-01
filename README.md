@@ -3,29 +3,24 @@
   height='48'
 />
 
-# python-project-template
-A carbonplan template for a developing a python project
+# toucan-crypto-offsets
+Code and data underlying CarbonPlan's article entitle "Zombies on the blockchain."
 
-[![CI](https://github.com/carbonplan/python-project-template/actions/workflows/main.yaml/badge.svg)](https://github.com/carbonplan/python-project-template/actions/workflows/main.yaml)
 ![MIT License][]
 
 [mit license]: https://badgen.net/badge/license/MIT/blue
 
+This CarbonPlan repository contains all the code and data necessary to recreate the figures and findings reported in our research article entitled "Zombies on the blockchain."
+In addition to containing a script for downloading Verra transaction data, we also include a manually compiled list of Verra project regirstration dates.
+Together, these data allow us to take stock of the types of Verra offset credits that have been bridge via the Toucan protocol.
+The `data/` folder contains a static copy of all data used in our analysis.
 
-This carbonplan repository contains a template for developing a python project. To start, click on the green [Use this template](https://github.com/carbonplan/python-project-template/generate) in the top right. This will allow you to create a new project using this base template.
+The analysis is contained entirely within a single Jupyter notebook, `core-analysis.ipynb`.
+That code i) identifies all projects that have reported retirements via Toucan and ii) classifies projects as being "zombies."
+A project qualifies as being a zombie project if it meets one of two criteria:
+- The project has transacted more than 95 percent if its retirements via Toucan
+- The project had not seen a retirement in the two years prior to its first Toucan retirment.
 
-## Modifications
-
-### Updating project name
-
-`scripts` and `tests` contain filler .py files. Update/remove these with your project name.
-### Updating workflows/main.yaml
-
-In the workflows/main.yaml file, the pytest and docker sections of the github actions configuration are currently commented out. If you wish to add them, uncomment them.
-
-### Updating requirements.txt
-
-requirements.txt is currently empty. You can populate it with: ```pip3 freeze > requirements.txt```
 
 ## license
 
@@ -33,4 +28,5 @@ All the code in this repository is [MIT](https://choosealicense.com/licenses/mit
 
 ## about us
 
-CarbonPlan is a non-profit organization working on the science and data of carbon removal. We aim to improve the transparency and scientific integrity of carbon removal and climate solutions through open data and tools. Find out more at [carbonplan.org](https://carbonplan.org/) or get in touch by [opening an issue](https://github.com/carbonplan/python-project-template/issues/new) or [sending us an email](mailto:hello@carbonplan.org).
+CarbonPlan is a non-profit organization that uses data and science for climate action.
+We aim to improve the transparency and scientific integrity of carbon removal and climate solutions through open data and tools. Find out more at [carbonplan.org](https://carbonplan.org/) or get in touch by [opening an issue](https://github.com/carbonplan/python-project-template/issues/new) or [sending us an email](mailto:hello@carbonplan.org).
